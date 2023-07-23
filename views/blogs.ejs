@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="mainBlock" >
+        <div id="blog">
+    <div class="form">
+        <form action="/blog" method="post">
+            <label for="title">Title :</label><br><input type="text" name="title" id="title" style="height: 4vh;"> <br><br>
+            <label for="snippet">Snippet :</label><br><input type="text" name="snippet" id="snippet" style="height: 4vh;"> <br><br>
+            <label for="body">Body :</label><br>
+            <textarea name="body" id="body" cols="70" rows="10"></textarea><br><br>
+            <button type="submit" id="buttonBlock">Submit</button>
+        </form>
+    </div>
+</div>
+        <%- include('./partials/footer.ejs') %>
+    </div>
+
+</body>
+</html>

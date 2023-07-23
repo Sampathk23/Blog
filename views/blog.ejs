@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="mainBlock">
+<div>
+    <h3><%= blog.title%></h3>
+    <p><%= blog.snippet%></p>
+    <p><%= blog.body%></p>
+    <form action="/blog/<%= blog._id%>?_method=DELETE" method="post">
+        <input type="hidden" name="_method" value="DELETE"> <br> 
+        <button type="submit"><i class ='fas fa-trash-alt fa-lg'></i></button>
+       <br> <br>
+    </form>
+</div>
+
+    <%- include('./partials/footer.ejs') %>
+</div>
+</body>
+</html>
+
+<!-- blog.ejs is used to display only one blog -->
